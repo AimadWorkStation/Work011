@@ -1,9 +1,85 @@
+/**
+ * Developped By EmadEddin Had (A.H)
+ * NextG WorkShared
+ */
 $indexbackColor: #2c3338;
 $indextfontColor : #606468;
-$primaryColor : #363B41FF;
-$secondaryColor : #EA4C88FF;
+$primaryColor : #24292C;
+$secondaryColor : #E94383;
+$secondaryColorUpper : #CF278A;
+
+%inputDisableOuline{
+	box-shadow : none !important;
+    &:hover,&:active,&:focus{
+        outline: 0px !important;
+        -webkit-appearance: none;
+        border-color: $indexbackColor !important;
+    }
+}
 
 body{
     background-color: $indexbackColor ;
     color: $indextfontColor;
+}
+.login{
+    margin-top: 18%;
+    width: 284px;
+    input{
+    	@extend %inputDisableOuline;
+	    box-shadow: none !important;
+	    width: 310px;
+	    height: 47px;
+	    padding: 0 10px 4px 45px;
+	    background-color: $primaryColor;
+	    margin: 20px;
+	    position:relative;
+	    &:focus{
+	    	background-color:$indextfontColor;
+	    	color: white;
+	    }
+	    &:last-of-type{
+	    	background-color:$secondaryColor;
+	    	padding-left: 27px;
+	    	width: 139px;
+	    	height: 42px;
+	    	border-color : $secondaryColorUpper;
+	    	&:focus,&:active{
+	    		background-color :$secondaryColor !important;
+	    	}
+	    	&:hover{
+	    		background-color : $secondaryColorUpper;
+	    	}
+	    }
+	    i{
+
+	    }
+    }
+    #register{
+	    color: white;
+    	cursor: pointer;
+    	&:hover{
+    		zoom : 1.04;
+    	}
+    }
+}
+
+.register {
+    position: absolute;
+    top: -59px;
+    left: 40%;
+    background-color: $indexbackColor;
+    display: none;
+    width: 344px;
+    .close{
+	    font-size: 22px;
+    }
+    p{
+    	color: blue;
+	    display: block;
+	    text-align: center;
+	    margin: -13px !important;
+    }
+    #adduser{
+    	cursor: pointer;
+    }
 }

@@ -3,15 +3,13 @@
 	global $pageTitle;
 	global $pageHeader;
 	global $login;
-	if(isset($_SESSION['Username'])){
+	if(isset($_SESSION['username'])){
 		$pageTitle = $_SESSION['username'];
 		$pageHeader = 'Chat Room';
-		$login = true;
 	}
 	else{
 		$pageHeader = '';
 		$pageTitle = "login";
-		$login = false;
 	}
  ?>
 <!DOCTYPE html>
@@ -30,15 +28,18 @@
 	<link rel="stylesheet" href="app/css/style.css">
 </head>
 <body>
-	<h1 class="text-center"><?php echo $pageHeader; ?></h1>
+	<div class="header">
+		<h1 class="text-center"><?php echo $pageHeader; ?></h1>
+	</div>
+	
 	<div class="container loginPage">
 		<!-- code login/singing page -->
 		<?php 
-			if($login){
+			if(isset($_SESSION['username'])){
 				echo "Aimad";
 			}
 			else{
-				echo "NoOne";
+				include_once "app/templates/login.php";
 			}
 		 ?>
 		<!-- end code login singe in page -->
@@ -53,6 +54,5 @@
 	<script src="app/js/popper.min.js"></script>
 	<script src="app/js/bootstrap.min.js"></script>
 	<script src='app/js/plugins.js'></script>
-	<script src='app/js/bundle.js'></script>	
 </body>
 </html>

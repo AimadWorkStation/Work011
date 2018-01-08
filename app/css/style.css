@@ -1,0 +1,78 @@
+/**
+ * Developped By EmadEddin Had (A.H)
+ * NextG WorkShared
+ */
+.login input {
+  box-shadow: none !important;
+}
+.login input:hover, .login input:active, .login input:focus {
+  outline: 0px !important;
+  -webkit-appearance: none;
+  border-color: #2c3338 !important;
+}
+
+body {
+  background-color: #2c3338;
+  color: #606468;
+}
+
+.login {
+  margin-top: 18%;
+  width: 284px;
+}
+.login input {
+  box-shadow: none !important;
+  width: 310px;
+  height: 47px;
+  padding: 0 10px 4px 45px;
+  background-color: #24292C;
+  margin: 20px;
+  position: relative;
+}
+.login input:focus {
+  background-color: #606468;
+  color: white;
+}
+.login input:last-of-type {
+  background-color: #E94383;
+  padding-left: 27px;
+  width: 139px;
+  height: 42px;
+  border-color: #CF278A;
+}
+.login input:last-of-type:focus, .login input:last-of-type:active {
+  background-color: #E94383 !important;
+}
+.login input:last-of-type:hover {
+  background-color: #CF278A;
+}
+.login #register {
+  color: white;
+  cursor: pointer;
+}
+.login #register:hover {
+  zoom: 1.04;
+}
+
+.register {
+  position: absolute;
+  top: -59px;
+  left: 40%;
+  background-color: #2c3338;
+  display: none;
+  width: 344px;
+}
+.register .close {
+  font-size: 22px;
+}
+.register p {
+  color: blue;
+  display: block;
+  text-align: center;
+  margin: -13px !important;
+}
+.register #adduser {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
