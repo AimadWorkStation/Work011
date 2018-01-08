@@ -29,14 +29,14 @@
 </head>
 <body>
 	<div class="header">
-		<h1 class="text-center"><?php echo $pageHeader; ?></h1>
+		<h1 class="text-center mt-5"><?php echo $pageHeader; ?></h1>
 	</div>
 	
 	<div class="container loginPage">
 		<!-- code login/singing page -->
 		<?php 
 			if(isset($_SESSION['username'])){
-				echo "Aimad";
+				include_once "app/templates/chatroom.php";
 			}
 			else{
 				include_once "app/templates/login.php";
