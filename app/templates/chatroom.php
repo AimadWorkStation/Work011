@@ -3,7 +3,7 @@
  ?>
 
 
- 	<div class="row chatroom mt-5 mb-5 w-75 ml-auto mr-auto">
+ 	<div class="row chatroom mt-5 mb-5 w-75 ml-auto mr-auto h-100">
 
 		<div class="d-xl-none col-sm-12 listefriendMobile">
 			<div class="d-block d-lg-none d-xl-block col-sm-12" style="background-color: red;height: 100px;">
@@ -91,18 +91,18 @@
 	 	</div>
 	 	<div class="chatingzone col-sm-12 col-lg-8 position-relative">
 	 		<div class="row chatheader" style="height: 100px;">
-	 			<div class="down col-8 row">
-	 				<div class="col-4">
+	 			<div class="down col-9 row pr-0">
+	 				<div class="col-3 pr-0">
 	 					<img src="app/img/user/default.jpg" class="img-fluid rounded-circle border border-secondary">
 	 				</div>
-	 				<div class="col-7 mt-4">
+	 				<div class="col-9 mt-4">
 	 					<span>Chat With EmadEddin</span>
-	 					<span>Messages 1213</span>
+	 					<span class="d-block">Messages 1213</span>
 	 				</div>
 	 			</div>
-	 			<div class="up col-4">
-	 				<span id="profil" class="float-right p-2">Profile</span>
-	 				<span id="logout" class="float-right p-2">  Logout</span>
+	 			<div class="up col-3 p-0 mt-2">
+	 				<span id="logout" class="float-right pl-2">  Logout</span>
+	 				<span id="profil" class="float-right">Profile</span>
 	 			</div>
 	 		</div>
 	 		<div class="row chatbody" id="scrollstyle">
@@ -156,5 +156,10 @@
 			</div>
 	 	</div>
  	</div>
+	
+	<div class="editProfile text-center position-absolute w-75" style="top:28%;
+    left: 13%; display: none;">
+		<?php include_once 'editProfile.php'; ?>
+	</div>
 
  	

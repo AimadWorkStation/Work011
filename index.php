@@ -43,6 +43,9 @@
 			}
 		 ?>
 		<!-- end code login singe in page -->
+	</div>
+	<div class="copyright text-center">
+		<span style="font-size: 12px">Designed by EmadEddin, FounderOf NextG Workshare &copy; 2018</span>
 	</div>	
 	
 	

@@ -55,6 +55,14 @@ $(document).ready(function(){
 		});
 		
 	});
+
+	$('#profil').click(function(){
+		$('.editProfile').fadeIn(1000);
+	});
+	$('#closeEditProfile').click(function(){
+		$('.editProfile').fadeOut(1000);
+	});
+	
 	
 
 });
