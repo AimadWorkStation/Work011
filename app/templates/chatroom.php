@@ -3,7 +3,7 @@
  ?>
 
 
- 	<div class="row chatroom mt-5 mb-5 w-75 ml-auto mr-auto h-100">
+ 	<div class="row chatroom mt-5 mb-4 w-75 ml-auto mr-auto h-100">
 
 		<div class="d-xl-none col-sm-12 listefriendMobile">
 			<div class="d-block d-lg-none d-xl-block col-sm-12" style="background-color: red;height: 100px;">
@@ -26,65 +26,7 @@
 	 		</div>
 	 		<div class="row listbody position-relative h-100" id="scrollstyle">
 	 			<ul class="list-group">
-				  <li class="row">
-		 				<div class="col-4">
-		 					<img src="app/img/user/default.jpg" class="img-fluid rounded-circle border border-secondary">
-		 				</div>
-		 				<div class="col-8 mt-4">
-		 					<span>EmadEddin</span>
-		 					<span><i class="fa fa-check-circle"> online</i></span>
-		 				</div>
-				  </li>
-
-				  <li class="row">
-		 				<div class="col-4">
-		 					<img src="app/img/user/default.jpg" class="img-fluid rounded-circle border border-secondary">
-		 				</div>
-		 				<div class="col-8 mt-4">
-		 					<span>EmadEddin</span>
-		 					<span><i class="fa fa-check-circle"> online</i></span>
-		 				</div>
-				  </li>
-
-				  <li class="row">
-		 				<div class="col-4">
-		 					<img src="app/img/user/default.jpg" class="img-fluid rounded-circle border border-secondary">
-		 				</div>
-		 				<div class="col-8 mt-4">
-		 					<span>EmadEddin</span>
-		 					<span><i class="fa fa-check-circle"> online</i></span>
-		 				</div>
-				  </li>
-
-				  <li class="row">
-		 				<div class="col-4">
-		 					<img src="app/img/user/default.jpg" class="img-fluid rounded-circle border border-secondary">
-		 				</div>
-		 				<div class="col-8 mt-4">
-		 					<span>EmadEddin</span>
-		 					<span><i class="fa fa-check-circle"> online</i></span>
-		 				</div>
-				  </li>
-
-				  <li class="row">
-		 				<div class="col-4">
-		 					<img src="app/img/user/default.jpg" class="img-fluid rounded-circle border border-secondary">
-		 				</div>
-		 				<div class="col-8 mt-4">
-		 					<span>EmadEddin</span>
-		 					<span><i class="fa fa-check-circle"> online</i></span>
-		 				</div>
-				  </li>
-
-				  <li class="row">
-		 				<div class="col-4">
-		 					<img src="app/img/user/default.jpg" class="img-fluid rounded-circle border border-secondary">
-		 				</div>
-		 				<div class="col-8 mt-4">
-		 					<span>EmadEddin</span>
-		 					<span><i class="fa fa-check-circle"> online</i></span>
-		 				</div>
-				  </li>
+				  <!-- place of the users or friends list  -->
 
 				</ul>
 	 		</div>
@@ -101,8 +43,8 @@
 	 				</div>
 	 			</div>
 	 			<div class="up col-3 p-0 mt-2">
-	 				<span id="logout" class="float-right pl-2">  Logout</span>
-	 				<span id="profil" class="float-right">Profile</span>
+	 				<span id="logout" onclick="window.location = 'index.php';" class="float-right pl-2">  Logout</span>
+	 				<span id="profil" onclick="showprofile(<?php echo $_SESSION['id']; ?>);" class="float-right">Profile</span>
 	 			</div>
 	 		</div>
 	 		<div class="row chatbody" id="scrollstyle">
@@ -159,7 +101,7 @@
 	
 	<div class="editProfile text-center position-absolute w-75" style="top:28%;
     left: 13%; display: none;">
-		<?php include_once 'editProfile.php'; ?>
+		
 	</div>
 
  	
