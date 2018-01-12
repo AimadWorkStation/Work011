@@ -9,7 +9,7 @@
 
 	while ($row = $stmt->fetch()) { 
 		?>
-		<li class="row" onclick="loadchatbody(<?php echo $row['userid']; ?>);">
+		<li class="row marginit" onclick="addtofriendlist(<?php echo $row['userid']; ?>);">
 			<div class="img col-4">
 				<img src="app/img/user/<?php echo $row['image'] ?>" class="img-fluid rounded-circle border border-secondary">
 			</div>

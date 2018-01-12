@@ -57,38 +57,7 @@ $(document).ready(function(){
 	});
 
 	
-	//upload img vaidation
-  	$('#upload').change(function() {
-  		var file = $(this)[0].files[0];
-		var fileName = file.name;
-		var fileSize = file.size;
-		var extention = fileName.split('.').pop().toLowerCase();
-  		if(jQuery.inArray(extention, ['jpg','jpeg','png']) == -1){
-  			$('#filename').text('File has to be an image');
-  		}
-  		else if(fileSize > 700000){
-  			$('#filename').text('size must be < 700ko');
-  		}
-  		else{
-  			var form_data = new FormData();
-  			form_data.append('file',file);
-  			form_data.append('id',10);
-  			$.ajax({
-  				url : 'app/templates/upload.php',
-  				method : "POST",
-  				data : form_data,
-  				contentType : false,
-  				cache : false,
-  				processData : false,
-  				beforeSend : function(){
-					$('#filename').text("Uploading ...");
-  				},
-  				success : function(data){
-  					$('#filename').text(data);
-  				}
-  			});
-  		}
-  	});
+	
 
   	//function load chatbody
   	function loadchatbody(userid,friendid){
@@ -106,13 +75,13 @@ $(document).ready(function(){
 			});
 		}
 		else{
-			$.post('app/templates/listfriend.php',{},function(data){
+			$.post('app/templates/listfriend.php',{id:'*'},function(data){
 				$('.listbody .list-group').html(data);
 			});
 		}
 	});
   	//load friend automatique
-  	$.post('app/templates/listfriend.php',{},function(data){
+  	$.post('app/templates/listfriend.php',{id:'*'},function(data){
 		$('.listbody .list-group').html(data);
 	});	
 
@@ -149,4 +118,21 @@ $(".list-group").on("click", ".row", function(event){
 //show body of the friend 
 function loadchatbody(e){
 	console.log(e);
+}
+
+//add to chat body
+function addtofriendlist(e){
+	$.post('app/templates/listfriend.php',{id:'*'},function(data){
+		$('.listbody .list-group').html(data);
+	});	
+	$.post('app/templates/listfriend.php',{id:e},function(data){
+		$('.listbody .list-group').prepend(data);
+	});	
+	$('#search').val('');
+	console.log(e);
+}
+
+//update user
+function updateuser(){
+
 }

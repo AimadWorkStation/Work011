@@ -149,6 +149,9 @@ body{
 		    border-bottom-left-radius: 7px;
 		    .list-group{
 	    	    width: 257px;
+	    	    .marginit{
+	    	    	margin-bottom: 60px;
+	    	    }
 		    	.row{
 		    		cursor: pointer;
 		    		color: white;
@@ -166,6 +169,7 @@ body{
 		    		}
 		    		.info{
 		    			margin-top: 7px!important;
+	    			    font-size: 13px;
 		    		}
 	    			&:hover{
 	    				background-color : #04040426;

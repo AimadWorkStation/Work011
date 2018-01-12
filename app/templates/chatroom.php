@@ -15,8 +15,6 @@
 		 		</div>
 		 	</div>
 		</div>
-
-
  		<div class="listefriend d-none d-lg-block col-lg-4">
  			<div class="row listheader">
 	 			<div class="search h-100 w-100 position-relative">
@@ -43,7 +41,7 @@
 	 				</div>
 	 			</div>
 	 			<div class="up col-3 p-0 mt-2">
-	 				<span id="logout" onclick="window.location = 'index.php';" class="float-right pl-2">  Logout</span>
+	 				<span id="logout" onclick="window.location ='index.php';" class="float-right pl-2">  Logout</span>
 	 				<span id="profil" onclick="showprofile(<?php echo $_SESSION['id']; ?>);" class="float-right">Profile</span>
 	 			</div>
 	 		</div>

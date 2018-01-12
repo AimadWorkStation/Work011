@@ -128,6 +128,9 @@ body {
 .chatroom .listefriend .listbody .list-group {
   width: 257px;
 }
+.chatroom .listefriend .listbody .list-group .marginit {
+  margin-bottom: 60px;
+}
 .chatroom .listefriend .listbody .list-group .row {
   cursor: pointer;
   color: white;
@@ -146,6 +149,7 @@ body {
 }
 .chatroom .listefriend .listbody .list-group .row .info {
   margin-top: 7px !important;
+  font-size: 13px;
 }
 .chatroom .listefriend .listbody .list-group .row:hover {
   background-color: #04040426;
