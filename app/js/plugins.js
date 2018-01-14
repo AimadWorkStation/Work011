@@ -115,9 +115,17 @@ $(".list-group").on("click", ".row", function(event){
     $(this).addClass('friendActive').siblings().removeClass('friendActive');
 });
 
-//show body of the friend 
-function loadchatbody(e){
-	console.log(e);
+//show chatbody of the friend 
+function loadchatbody(id){
+	$.post('app/templates/loadchatheader.php',{id:id},function(data){
+		$('.down').html(data);
+	});
+	$.post('app/templates/chatbody.php',{id:id},function(data){
+		$('#chatbody').html(data);
+	});
+	// $.getJSON("myscript.php", function(data) {
+	//   alert("Value for 'a': " + data.a + "\nValue for 'b': " + data.b);
+	// });
 }
 
 //add to chat body

@@ -90,6 +90,9 @@ body {
 .register #adduser {
   cursor: pointer;
 }
+.register i:hover {
+  cursor: pointer;
+}
 
 .chatroom {
   height: 500px;
@@ -215,7 +218,6 @@ body {
   position: relative;
   max-width: 45%;
   padding: 5px 10px;
-  margin: 1em 2em;
   color: white;
   background: #606468;
   border-radius: 25px;

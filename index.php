@@ -29,7 +29,7 @@
 </head>
 <body>
 	<div class="header">
-		<h1 class="text-center mt-5"><?php echo $pageHeader; ?></h1>
+		<h1 class="text-center mt-2"><?php echo $pageHeader; ?></h1>
 	</div>
 	
 	<div class="container loginPage">

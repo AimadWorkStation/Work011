@@ -32,13 +32,8 @@
 	 	<div class="chatingzone col-sm-12 col-lg-8 position-relative">
 	 		<div class="row chatheader" style="height: 100px;">
 	 			<div class="down col-9 row pr-0">
-	 				<div class="col-3 pr-0">
-	 					<img src="app/img/user/default.jpg" class="img-fluid rounded-circle border border-secondary">
-	 				</div>
-	 				<div class="col-9 mt-4">
-	 					<span>Chat With EmadEddin</span>
-	 					<span class="d-block">Messages 1213</span>
-	 				</div>
+	 				<!-- place of header chat with whom i'm chatting -->
+	 				
 	 			</div>
 	 			<div class="up col-3 p-0 mt-2">
 	 				<span id="logout" onclick="window.location ='index.php';" class="float-right pl-2">  Logout</span>
@@ -49,43 +44,8 @@
 	 				<div class="w-100 text-center" id="showmore" style="height: 26px">
 	 					<span id="loadmore">Load more <i class="fa fa-spinner"></i></span>
 	 				</div>
-		 			<ul class="list-group w-100 position-relative list-unstyled h-100">
-						<li class="message-local">
-								Hello WorldHello
-						</li>
-						<li class="message-local">
-								Hello World
-						</li>	
-						<li class="message-local">
-								Hello World
-						</li>	
-						<li class="message-local">
-								Hello World
-						</li>	
-						<li class="message-remote">
-								Hello World
-						</li>	
-						<li class="message-local">
-								Hello World
-						</li>	
-						<li class="message-local">
-								Hello World
-						</li>	
-						<li class="message-local">
-								Hello World
-						</li>	
-						<li class="message-remote">
-								Hello World
-						</li>		
-						<li class="message-remote">
-								Hello World
-						</li>	
-						<li class="message-remote">
-								Hello World
-						</li>		  
-						<li class="message-remote">
-								Hello World
-						</li>	
+		 			<ul class="list-group w-100 position-relative list-unstyled h-100" id="chatbody">
+						<!-- messages contents -->
 					</ul>
 	 		</div>
 	 		<div class="write position-absolute">
