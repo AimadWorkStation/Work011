@@ -137,6 +137,7 @@ body {
 .chatroom .listefriend .listbody .list-group .row {
   cursor: pointer;
   color: white;
+  margin-bottom: 65px;
 }
 .chatroom .listefriend .listbody .list-group .row .img {
   padding-bottom: 5px;
@@ -198,6 +199,7 @@ body {
   color: white;
   background: #24292C;
   border-radius: 25px;
+  margin-bottom: 7px;
   clear: both;
 }
 .chatroom .chatingzone .chatbody .message-local:before {
@@ -223,6 +225,7 @@ body {
   border-radius: 25px;
   clear: both;
   margin-left: 49%;
+  margin-bottom: 7px;
 }
 .chatroom .chatingzone .chatbody .message-remote:before {
   content: ' ';

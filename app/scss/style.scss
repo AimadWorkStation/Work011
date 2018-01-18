@@ -162,6 +162,7 @@ body{
 		    	.row{
 		    		cursor: pointer;
 		    		color: white;
+		    		margin-bottom: 65px;
 		    		.img{
 	    			    padding-bottom: 5px;
 	    			    img{
@@ -241,6 +242,7 @@ body{
 				color:white; 
 				background: $primaryColor;
 				border-radius:25px;
+				margin-bottom: 7px;
 			  	clear: both;
 					
 				&:before{
@@ -267,6 +269,7 @@ body{
 				border-radius:25px;
 			  	clear: both;
 			    margin-left: 49%;
+			    margin-bottom: 7px;
 					
 				&:before {
 				content: ' ';

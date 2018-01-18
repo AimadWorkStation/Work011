@@ -4,7 +4,7 @@
 	if(isset($_SESSION['id'])){
 		if($_POST['id'] == '*'){
 			$id = $_SESSION['id'];
-			$stmt = $con->prepare('select idrecever from comment where idsender = "'. $id .'" order by post_time');
+			$stmt = $con->prepare("select DISTINCT `idsender` as friends,`post_time` from comment WHERE `idrecever` = $id UNION SELECT DISTINCT `idrecever` as friends, `post_time` FROM comment WHERE `idsender` = $id ORDER BY `post_time` DESC");
 
 			$stmt -> execute();
 
@@ -13,7 +13,7 @@
 				$stmt2 -> execute();
 				$row2 = $stmt2->fetch();
 				?>
-				<li class="row" onclick="loadchatbody(<?php echo $row2['userid']; ?>);" >
+				<li class="row" onclick="loadchatbody(<?php echo $_SESSION['id'] .','. $row2['userid']; ?>);" >
 					<div class="img col-4">
 						<img src="app/img/user/<?php echo $row2['image'] ?>" class="img-fluid rounded-circle border border-secondary">
 					</div>
@@ -37,7 +37,7 @@
 
 						$row = $stmt->fetch();
 						?>
-							<li class="row" onclick="loadchatbody(<?php echo $row['userid']; ?>);" >
+							<li class="row" onclick="loadchatbody(<?php echo $_SESSION['id'] .','. $row['userid']; ?>);" >
 									<div class="img col-4">
 										<img src="app/img/user/<?php echo $row['image'] ?>" class="img-fluid rounded-circle border border-secondary">
 									</div>

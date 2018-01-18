@@ -64,6 +64,7 @@ $(document).ready(function(){
   		$.post('loadchatbody.php', {userid : userid,friendid : friendid}, function(data){
   			$('.list-group').innerHTML(data);
   		});
+  		$('#send').attr('onclick','send(userid,friendid)');
   	}
 
   	//search friends
@@ -94,6 +95,22 @@ $(document).ready(function(){
 
 // functions ::
 
+//send msg function
+function send(userid,friendid){
+	msg = $('#message').val();
+	$.post('app/templates/sendmsg.php',{userid : userid,friendid : friendid,msg : msg},function(data){
+		if(data == 'empty'){
+
+		}else{
+			$('#message').val('');
+			loadchatbody(userid,friendid);
+		}
+		
+	});
+}
+
+
+
 //to show editprofile
 function showprofile(id){
 	$.post('app/templates/editProfile.php', {id: id}, function(data) {
@@ -116,13 +133,14 @@ $(".list-group").on("click", ".row", function(event){
 });
 
 //show chatbody of the friend 
-function loadchatbody(id){
-	$.post('app/templates/loadchatheader.php',{id:id},function(data){
+function loadchatbody(id , friendid){
+	$.post('app/templates/loadchatheader.php',{id:friendid},function(data){
 		$('.down').html(data);
 	});
-	$.post('app/templates/chatbody.php',{id:id},function(data){
+	$.post('app/templates/chatbody.php',{id:friendid},function(data){
 		$('#chatbody').html(data);
 	});
+	$('#send').attr('onclick','send('+ id +','+ friendid +')');
 	// $.getJSON("myscript.php", function(data) {
 	//   alert("Value for 'a': " + data.a + "\nValue for 'b': " + data.b);
 	// });
