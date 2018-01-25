@@ -24,8 +24,13 @@
 	<!-- bootstrap -->
 	<link rel="stylesheet" href="app/css/bootstrap.min.css">
 	<link rel="stylesheet" href="app/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="app/css/animate.css">
 	<!-- my css codes -->
 	<link rel="stylesheet" href="app/css/style.css">
+	<!-- react framwork -->
+	<script type="text/javascript" src="app/js/react.development.js"></script>
+	<script type="text/javascript" src="app/js/react-dom.development.js"></script>
+	<script type="text/javascript" src="app/js/browser-5.8.34.min.js"></script>
 </head>
 <body>
 	<div class="header">
@@ -35,27 +40,30 @@
 	<div class="container loginPage">
 		<!-- code login/singing page -->
 		<?php 
-			if(isset($_SESSION['username'])){
-				include_once "app/templates/chatroom.php";
-			}
-			else{
-				include_once "app/templates/login.php";
-			}
+			if(isset($_SESSION['username'])){ ?>
+				<div id="chattroom">
+					
+				</div>	
+			<?php }
+			else{ ?>
+				<div id="login">
+					
+				</div>
+				<div id="app"></div>
+			<?php }
 		 ?>
 		<!-- end code login singe in page -->
 	</div>
+
 	<div class="copyright text-center">
 		<span style="font-size: 12px">Designed by EmadEddin, FounderOf NextG Workshare &copy; 2018</span>
 	</div>	
-	
-	
-	
 	<!-- jquery labrery file -->
 
 	<!-- positioning labrery -->
 	<script src="app/js/jquery-3.2.1.min.js"></script>
 	<script src="app/js/popper.min.js"></script>
 	<script src="app/js/bootstrap.min.js"></script>
-	<script src='app/js/plugins.js'></script>
+	<script type="text/babel" src='app/js/main.js'></script>
 </body>
 </html>

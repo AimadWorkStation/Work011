@@ -1,5 +1,5 @@
 <?php 
-	include_once 'config.php';
+	namespace App;
 	if($_SERVER['REQUEST_METHOD'] == 'POST'){
 		$username = $_POST['user'];
 		$pass = sha1($_POST['pass']);

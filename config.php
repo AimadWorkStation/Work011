@@ -16,15 +16,7 @@
 		
 	}
 
-	
-
-
-
-
-
-
-
-		// $dsn = 'mysql:host=mysql12.000webhost.com;dbname=id4233531_chat_interface';
+	// $dsn = 'mysql:host=mysql12.000webhost.com;dbname=id4233531_chat_interface';
 	// $user = 'id4233531_youritchad';
 	// $pass = '******';
 	// $option = array(
